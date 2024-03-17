@@ -39,6 +39,7 @@ function init() {
     license: '',
     github: '',
     email: '',
+    toc: '',
   }
 
   // use inquirer to fill in the fields of the data object
