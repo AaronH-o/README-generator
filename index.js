@@ -77,8 +77,9 @@ function init() {
       },
       {
         name: "license",
-        type: "input",
+        type: "list",
         message: questions[6],
+        choices: ["None", "something"],
       },
       {
         name: "github",
@@ -101,6 +102,11 @@ function init() {
       data.license = answer.license;
       data.github = answer.github;
       data.email = answer.email;
+
+      // put the correct contents into license
+      if(data.license == 'None') {
+
+      }
 
       // call writeToFile and pass in the object
       writeToFile('TEST-README.md', data);
