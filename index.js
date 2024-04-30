@@ -104,7 +104,7 @@ function init() {
       data.email = answer.email;
 
       // call writeToFile and pass in the object
-      writeToFile(data.title.replace(/ /g,'-')+'.md', data);
+      writeToFile(data.title.replace(/ /g,'-')+'-README.md', data);
     })
 }
 
