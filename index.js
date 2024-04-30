@@ -79,7 +79,7 @@ function init() {
         name: "license",
         type: "list",
         message: questions[6],
-        choices: ["None", "something"],
+        choices: ["None", "GNU General Public License", "MIT License", "Apache License", "Eclipse Public License"],
       },
       {
         name: "github",
@@ -103,13 +103,8 @@ function init() {
       data.github = answer.github;
       data.email = answer.email;
 
-      // put the correct contents into license
-      if(data.license == 'None') {
-
-      }
-
       // call writeToFile and pass in the object
-      writeToFile('TEST-README.md', data);
+      writeToFile(data.title.replace(/ /g,'-')+'.md', data);
     })
 }
 
