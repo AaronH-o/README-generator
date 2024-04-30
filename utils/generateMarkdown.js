@@ -26,34 +26,32 @@ function renderLicenseSection(license) {
   if(license == 'None') {
     return '';
   }
-
   return `## License <a name="license"></a>
 ${renderLicenseBadge()} ${license}
 <${renderLicenseLink(license)}>
 `;
-
 }
 
 function generateToC(license){
   if(license == 'None') {
     return `## Table of Contents
-    1. [Description](#description)
-    2. [Installation](#installation)
-    3. [Usage](#usage)
-    4. [Contribution](#contribution)
-    5. [Test](#test)
-    6. [GitHub](#github)
-    7. [Email](#email)`
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contribution](#contribution)
+5. [Test](#test)
+6. [GitHub](#github)
+7. [Email](#email)`
   }
   return `## Table of Contents
-  1. [Description](#description)
-  2. [Installation](#installation)
-  3. [Usage](#usage)
-  4. [Contribution](#contribution)
-  5. [Test](#test)
-  6. [License](#license)
-  7. [GitHub](#github)
-  8. [Email](#email)`
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contribution](#contribution)
+5. [Test](#test)
+6. [License](#license)
+7. [GitHub](#github)
+8. [Email](#email)`
 }
 
 // TODO: Create a function to generate markdown for README
